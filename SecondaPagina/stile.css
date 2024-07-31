@@ -1,0 +1,20 @@
+
+    body {
+        background-color: rgb(196, 216, 13);
+        text-align: center;
+    }
+    p #testoverde{
+        text-align: left;
+        font-size: xx-large;
+    }
+    #testorosso {
+        color: red;
+        background-color: blue;
+    }
+    .testoverde {
+        color: green;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 40px;
+        text-align: center;
+
+    }

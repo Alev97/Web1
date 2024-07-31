@@ -3,6 +3,8 @@
 <html>
     <head>
         <title>Calcolo Codice Fiscale</title>
+        <script src="lista-province.js"></script>
+        <script src="lista-comuni.js"></script>
         <style>
             body {
             margin: 0;
@@ -408,7 +410,24 @@
 
             window.onload = function(){
                 console.log("Hai ricaricato la pagina")
-                alert("Hai ricaricato la pagina")
+                var selectList = document.getElementById("id_prov")
+                for(var k in PROVINCIE)
+                {
+                    var option = document.createElement("option")
+                    option.value = k;
+                    option.text = k;
+                    selectList.appendChild(option);
+                }
+                //var option = document.createElement("option");
+                //option.value = "RM";
+                //ption.text = "RM";
+                //selectList.appendChild(option);
+
+                //var selectList = document.getElementById("id_prov")
+                //var option = document.createElement("option");
+                //option.value = "MI";
+                //option.text = "MI";
+                //selectList.appendChild(option);
             }
         </script>
             
@@ -453,7 +472,8 @@
             
             <div class="field provincia">
                 <div class="label">PROVINCIA (SIGLA)</div>
-                <div class="input"><input type="text" name="prov" value="" maxlength="2" /></div>
+                <select name="prov" id="id_prov" required></select>
+                <!--<div class="input"><input type="text" name="prov" value="" maxlength="2" />--></div>
             </div>
             
             <div class="field data">
